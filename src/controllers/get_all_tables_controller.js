@@ -1,7 +1,5 @@
-import app from 'app';
-import GetAllTables from '../usecase/get_all_tables_usecase';
+const getAllTables = require("../usecase/get_all_tables_usecase")
 
-
-app.get('/', (req, res) => {
-    res.send(GetAllTables());
-  })
+exports.GetAllTablesController = (req, res) => {
+  res.send(getAllTables.GetAllTables())
+}
